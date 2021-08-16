@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.menu {font-family: 'Lobster', cursive;}
+
+.title{ display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.title > h2{font-size: 45pt;}
+.underline{
+    margin-top: 10px;
+    width: 180px;
+    height: 12px;
+    background-color: goldenrod;
+}
+
+.title{
+    margin:100px 0px;
+}
+
+.section-center{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.menu-item{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+margin-bottom: 30px;}
+.photo{
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    border: solid 5px gold;
+}
+.name-price{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ margin: 10px 0px;
+ padding: 5px;
+ border-bottom: 1px gray solid ;}
+.price{
+    color: goldenrod;
+}
+.menu-info{
+    opacity: 0.7;
+}
