@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+button{
+    margin: 0px 10px;
+
+}
+.filter{display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 10px;
+
+
+}
+
 .menu {font-family: 'Lobster', cursive;}
 
 .title{ display: flex;
@@ -17,7 +30,7 @@
 }
 
 .title{
-    margin:100px 0px;
+    margin:50px 0px;
 }
 
 .section-center{
