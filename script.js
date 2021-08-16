@@ -72,6 +72,51 @@ const menu = [
       desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
     },
   ];
+//버튼을 통해서 필터를 진행해주면된다는 건 알겠는데,그걸 html에 적용하는 
+//방법을 모르겟음🤔👉map을 통해서 리턴해주는 방식을 이용
 
-    const result =menu.filter(item=>{item.category="breakfast"});
-    console.log(result)
+const sectionCenter= document.querySelector(".section-center")
+const allBtn= document.querySelector(".all")
+const breakBtn= document.querySelector(".break")
+const shakeBtn= document.querySelector(".shake")
+const lunchBtn= document.querySelector(".lunch")
+
+function arrayMenu(){
+    let menu2 = menu.map(item=>{
+return `<article class="menu-item"> 
+    <img src=${item.img} alt="pancake" class="photo">
+    <div class="item-info">
+    <header class="name-price"> 
+    <h4 class="menu-name">${item.title}</h4>    
+    <h4 class="price">${item.price}</h4>W
+    </header> 
+    <p class="menu-info">${item.desc}</p>    
+    </div>
+    </article>`});
+    menu2=menu2.join("");
+    sectionCenter.innerHTML=menu2;}
+
+function showMenu(){
+    let showMenu =menu.filter(item => {return  item.category=="shakes"
+    })
+    //filter 해준게 array로 나오니까 그걸다시 맵해주면되는거지! 
+    let result= showMenu.map(item=> {return `<article class="menu-item"> 
+    <img src=${item.img} alt="pancake" class="photo">
+    <div class="item-info">
+    <header class="name-price"> 
+    <h4 class="menu-name">${item.title}</h4>    
+    <h4 class="price">${item.price}</h4>W
+    </header> 
+    <p class="menu-info">${item.desc}</p>    
+    </div>
+    </article>`}) 
+    result=result.join("");
+    sectionCenter.innerHTML=result;}
+
+
+
+arrayMenu()
+allBtn.addEventListener('click',arrayMenu)
+breakBtn.addEventListener('click', showMenu)
+shakeBtn.addEventListener('click', showMenu)
+lunchBtn.addEventListener('click', showMenu)
