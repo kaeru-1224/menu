@@ -115,7 +115,7 @@ function showMenu(menuname){
     sectionCenter.innerHTML=result;}
 
 
-//버튼 클래스가 각각 다른데도 이유는 모르겟는데 
+//디두야 오타좀,,,보자...
 
 arrayMenu()
 allBtn.addEventListener('click',arrayMenu)
