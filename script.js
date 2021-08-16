@@ -96,8 +96,8 @@ return `<article class="menu-item">
     menu2=menu2.join("");
     sectionCenter.innerHTML=menu2;}
 
-function showMenu(){
-    let showMenu =menu.filter(item => {return  item.category=="shakes"
+function showMenu(menuname){
+    let showMenu =menu.filter(filteritem => {return filteritem.category ===`${menuname}`
     })
     //filter 해준게 array로 나오니까 그걸다시 맵해주면되는거지! 
     let result= showMenu.map(item=> {return `<article class="menu-item"> 
@@ -111,12 +111,14 @@ function showMenu(){
     </div>
     </article>`}) 
     result=result.join("");
+    console.log(result)
     sectionCenter.innerHTML=result;}
 
 
+//앵 왜 아침식사 필터 작업이 안되는걸가? 안된다기보다는 되고 나서 그냥 그대로 화면이 고정됨 ....?
 
 arrayMenu()
 allBtn.addEventListener('click',arrayMenu)
-breakBtn.addEventListener('click', showMenu)
-shakeBtn.addEventListener('click', showMenu)
-lunchBtn.addEventListener('click', showMenu)
+
+shakeBtn.addEventListener('click', event2=>showMenu("shakes"))
+lunchBtn.addEventListener('click', event3=> showMenu( "lunch"))
