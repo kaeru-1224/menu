@@ -115,10 +115,10 @@ function showMenu(menuname){
     sectionCenter.innerHTML=result;}
 
 
-//앵 왜 아침식사 필터 작업이 안되는걸가? 안된다기보다는 되고 나서 그냥 그대로 화면이 고정됨 ....?
+//버튼 클래스가 각각 다른데도 이유는 모르겟는데 
 
 arrayMenu()
 allBtn.addEventListener('click',arrayMenu)
-
+breakBtn.addEventListener('click', event1=> showMenu("breakfast"))
 shakeBtn.addEventListener('click', event2=>showMenu("shakes"))
 lunchBtn.addEventListener('click', event3=> showMenu( "lunch"))
